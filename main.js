@@ -4,14 +4,18 @@ const quoteBtn = document.getElementById('btn')
 
 function getQuote() {
   fetch(apiUrl)
+    // if promise is resolved then format
+    // to json and pass data into displayQuote
     .then(response => response.json())
     .then(data => {
       displayQuote(data);
     })
+    // if promise is rejected, give error
     .catch(error => {
       console.error('Error fetching data:', error);
     });
 }
+
 
 function displayQuote(quoteData) {
   // insert quote into quoteContainer div
