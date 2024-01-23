@@ -67,7 +67,7 @@ function displayQuote(quoteData) {
 }
 
 function displayCat(catData) {
-  catContainer.innerHTML = `<img src="${catData.url}" alt="Random Cat">`;
+  catContainer.innerHTML = `<img src="${catData.url}" alt="Random Cat" style="max-width: 50%; height: auto;">`;
 }
 
 Promise.all([fetchCat,response]) 
