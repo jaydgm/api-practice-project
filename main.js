@@ -78,6 +78,14 @@ Promise.all([fetchCat,response])
     console.log(`Failed to fetch: ${error}`)
   })
 
+  Promise.any([fetchCat,response]) 
+    .then((responses) => {
+      console.log('i also work :D');
+    })
+    .catch((error) => {
+      console.log(`Failed to fetch: ${error}`)
+    });
+
 // triggers new quote 
 quoteBtn.addEventListener('click',getQuote)
 catBtn.addEventListener('click',getCat)
