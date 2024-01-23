@@ -1,7 +1,7 @@
 // calculates fibonacciNum 
 // called from within self.onmessage
 function calculateFib(fibonacciNum) {
-    if (fibNum <= 1) {
+    if (fibonacciNum <= 1) {
         return fibonacciNum;
     }
     return calculateFib(fibonacciNum - 1) + calculateFib(fibonacciNum - 2);
